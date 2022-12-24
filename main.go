@@ -27,6 +27,7 @@ func handleRequest(ctx *gin.Context) {
 	resp, err := createResponse()
 	if err != nil {
 		ctx.AbortWithError(http.StatusBadRequest, err)
+		return
 	}
 
 	ctx.Data(http.StatusOK, "Content-Type: text/html; charset=utf-8", resp)
