@@ -26,7 +26,7 @@ func handleRequest(ctx *gin.Context) {
 
 	resp, err := createResponse()
 	if err != nil {
-		ctx.AbortWithError(http.StatusBadRequest, err)
+		ctx.AbortWithError(http.StatusInternalServerError, err)
 		return
 	}
 
